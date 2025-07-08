@@ -25,6 +25,8 @@ const Favorites = () => {
       <section>
         <h3 className="text-green-300 font-bold mb-2">🎥 Otras cosas que me gustan</h3>
         <ul className="list-disc list-inside text-green-200">
+          <li>Mi novia 🤍</li>
+          <li>Ver series</li>
           <li>Editar videos</li>
           <li>Jugar a la Pelota</li>
           <li>Escuchar música</li>
