@@ -1,6 +1,5 @@
 import {
-  FaLinkedin, FaInstagram, FaTwitch, FaYoutube, FaDiscord, FaReddit,
-  FaGithub
+  FaLinkedin, FaInstagram, FaTwitch, FaYoutube, FaDiscord, FaReddit, FaGithub
 } from "react-icons/fa";
 
 const socialLinks = [
@@ -44,20 +43,23 @@ const socialLinks = [
 const Footer = () => {
   return (
     <footer className="bg-black border-t border-green-700 text-sm py-4 px-6">
-      <div className="flex flex-col sm:flex-row justify-between items-center">
-        <div className="text-green-500 mb-2 sm:mb-0">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+        {/* Texto inferior */}
+        <div className="text-green-500 text-center md:text-left">
           └─ © {new Date().getFullYear()} ~ patitojavi-portafolio
         </div>
-        <div className="flex flex-wrap gap-4 text-green-400">
+
+        {/* Redes sociales */}
+        <div className="flex flex-wrap justify-center gap-3 text-green-400">
           {socialLinks.map(({ name, icon, url }) => (
             <a
               key={name}
               href={url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center hover:text-green-200"
+              className="flex items-center gap-1 hover:text-green-200"
             >
-              <span className="mr-1">{icon}</span>
+              {icon}
               <span className="text-xs hidden sm:inline">{name}</span>
             </a>
           ))}

@@ -28,10 +28,11 @@ const icons: Record<string, React.ReactElement> = {
 
 const SkillBadge = ({ name }: SkillBadgeProps) => {
   return (
-    <span className="inline-flex items-center bg-green-900 text-green-300 border border-green-600 rounded px-3 py-1 text-sm font-mono m-1">
+    <span className="inline-flex items-center bg-green-900 text-green-300 border border-green-600 rounded px-3 py-1 text-sm font-mono m-1 transition-colors duration-200 hover:bg-green-800 hover:text-green-100">
       {icons[name]} {name}
     </span>
   );
 };
+
 
 export default SkillBadge;

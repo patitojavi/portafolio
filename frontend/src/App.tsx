@@ -14,7 +14,7 @@ function App() {
     <Router>
       <div className="min-h-screen bg-black text-green-500 font-mono flex">
         <Sidebar />
-        <div className="flex flex-col flex-grow ml-48">
+        <div className="flex flex-col flex-grow ml-0 md:ml-48">
           <main className="flex-grow p-6">
             <Routes>
               <Route path="/" element={<Home />} />

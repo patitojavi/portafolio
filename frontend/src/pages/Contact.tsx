@@ -1,6 +1,5 @@
 import {
-  FaLinkedin, FaInstagram, FaTwitch, FaYoutube, FaDiscord, FaReddit,
-  FaGithub
+  FaLinkedin, FaInstagram, FaTwitch, FaYoutube, FaDiscord, FaReddit, FaGithub
 } from "react-icons/fa";
 
 const socialLinks = [
@@ -34,7 +33,7 @@ const socialLinks = [
     icon: <FaReddit />,
     url: "https://www.reddit.com/user/PatitoJavi/",
   },
-    {
+  {
     name: "GitHub",
     icon: <FaGithub />,
     url: "https://github.com/patitojavi"
@@ -43,22 +42,24 @@ const socialLinks = [
 
 const Contact = () => {
   return (
-    <div className="p-6">
-      <h2 className="text-2xl text-green-400 mb-4">~/contacto</h2>
-      <p className="text-green-300 mb-4">
+    <div className="p-6 space-y-6">
+      <h2 className="text-2xl text-green-400">~/contacto</h2>
+
+      <p className="text-green-300 max-w-xl">
         Puedes contactarme o seguirme en las siguientes plataformas:
       </p>
 
-      <div className="flex flex-wrap gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {socialLinks.map(({ name, icon, url }) => (
           <a
             key={name}
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-green-300 hover:text-green-100 border border-green-700 rounded px-4 py-2 font-mono bg-black"
+            className="flex items-center gap-2 border border-green-700 rounded px-4 py-2 font-mono text-green-300 bg-black hover:text-green-100 hover:border-green-400 transition-colors"
           >
-            {icon} {name}
+            <span className="text-lg">{icon}</span>
+            <span>{name}</span>
           </a>
         ))}
       </div>
