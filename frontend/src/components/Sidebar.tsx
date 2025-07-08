@@ -15,13 +15,15 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Botón hamburguesa solo visible en sm */}
-      <button
-        onClick={() => setOpen(!open)}
-        className="md:hidden fixed top-4 left-4 z-50 bg-green-800 text-white p-2 rounded"
-      >
-        ☰
-      </button>
+      {/* ☰ Botón solo visible en sm, y solo si el menú no está abierto */}
+      {!open && (
+        <button
+          onClick={() => setOpen(true)}
+          className="md:hidden fixed top-4 left-4 z-50 bg-green-800 text-white p-2 rounded"
+        >
+          ☰
+        </button>
+      )}
 
       {/* Sidebar */}
       <aside
@@ -37,7 +39,7 @@ const Sidebar = () => {
             <Link
               key={link.name}
               to={link.path}
-              onClick={() => setOpen(false)}
+              onClick={() => setOpen(false)} // Al hacer click, cerrar el menú
               className={`hover:text-green-300 ${
                 location.pathname === link.path ? 'text-green-300' : ''
               }`}
