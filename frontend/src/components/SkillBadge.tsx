@@ -10,7 +10,7 @@ type SkillBadgeProps = {
   name: string;
 };
 
-const icons: Record<string, JSX.Element> = {
+const icons: Record<string, React.ReactElement> = {
   HTML: <SiHtml5 className="mr-1" />,
   CSS: <SiCss3 className="mr-1" />,
   JavaScript: <SiJavascript className="mr-1" />,
